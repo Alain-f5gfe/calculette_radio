@@ -256,8 +256,8 @@ class Calculatrice(QtWidgets.QWidget):
             self.le_operation.setText(str(""))  # vide la ligne opération
             message_box = QtWidgets.QMessageBox()  # lance une fenètre d'info en popup
             message_box.setWindowTitle("CALCULE LE SWR")  # titre de la fentre popup
-            message_box.setText(
-                "Entrez : \nla puissance directe \npuis la puissance réfléchie \nen mémoire STO avant d'appuyer sur le bouton swr")  # texte d aide
+            message_box.setText("pour calculer le SWR de votre installation\n"
+                "Entrez : \nla puissance directe \npuis la puissance réfléchie \nen mémoire STO avant d'appuyer sur le bouton SWR")  # texte d aide
             message_box.exec_()  # ouvre la boite popup
             self.supprimerResultat()  # efface tout
 
@@ -302,7 +302,7 @@ class Calculatrice(QtWidgets.QWidget):
             self.le_operation.setText(str(""))  # vide la ligne opération
             message_box = QtWidgets.QMessageBox()  # lance une fenètre d'info en popup
             message_box.setWindowTitle("CONVERTI dBm EN WATT")  # titre de la fentre popup
-            message_box.setText(
+            message_box.setText("CONVERTI dBm EN WATT\n"
                 "Entrez : \nla puissance en dB milli-watt\nrésultat en watt ou milli-watt")  # texte d aide
             message_box.exec_()  # ouvre la boite popup
             self.supprimerResultat()  # efface tout
@@ -326,7 +326,8 @@ class Calculatrice(QtWidgets.QWidget):
             self.le_operation.setText(str(""))  # vide la ligne opération
             message_box = QtWidgets.QMessageBox()  # lance une fenètre d'info en popup
             message_box.setWindowTitle("CONVERTI DES WATTS EN dBm")  # titre de la fentre popup
-            message_box.setText("Entrez : \nla puissance en watts\nsera convertie en dB milli-watt")  # texte d aide
+            message_box.setText("CONVERTI DES WATTS EN dBm\n"
+            "Entrez : \nla puissance en watts\nsera convertie en dB milli-watt")  # texte d aide
             message_box.exec_()  # ouvre la boite popup
             self.supprimerResultat()  # OK efface tout
 
@@ -345,7 +346,7 @@ class Calculatrice(QtWidgets.QWidget):
             self.le_operation.setText(str(""))  # vide la ligne opération
             message_box = QtWidgets.QMessageBox()  # lance une fenètre d'info en popup
             message_box.setWindowTitle("CONVERTI dBm EN TENSION")  # titre de la fentre popup
-            message_box.setText(
+            message_box.setText("CONVERTI dBm EN TENSION\n"
                 "Entrez : \nla puissance en dBm\nelle sera convertie en tension Volts ou milli-Volt\npour une charge de 50 Ohms")  # texte d aide
             message_box.exec_()  # ouvre la boite popup
             self.supprimerResultat()  # efface tout
@@ -370,8 +371,8 @@ class Calculatrice(QtWidgets.QWidget):
             self.le_operation.setText(str(""))  # vide la ligne opération
             message_box = QtWidgets.QMessageBox()  # lance une fenètre d'info en popup
             message_box.setWindowTitle("TENSION EN FONCTION DE LA PUISSANCE")  # titre de la fentre popup
-            message_box.setText(
-                "Entrez : \nla puissance HF appliquée à la charge ou à l'antenne\nelle sera convertie en tension\npour une impédance de 50 Ohms")  # texte d aide
+            message_box.setText("Donne la tention en Volt en fonction de la puissance"
+                "Entrez : \nLa puissance HF en Watt appliquée à la charge ou à l'antenne\nelle sera convertie en tension\npour une impédance de 50 Ohms")  # texte d aide
             message_box.exec_()  # ouvre la boite popup
             self.supprimerResultat()  # efface tout
         resultatOperation = sqrt(float(resultat) * 50)
@@ -398,7 +399,7 @@ class Calculatrice(QtWidgets.QWidget):
             self.le_operation.setText(str(""))  # vide la ligne opération
             message_box = QtWidgets.QMessageBox()  # lance une fenètre d'info en popup
             message_box.setWindowTitle("CALCUL DE LA VALEUR D'UNE SELF")  # titre de la fentre popup
-            message_box.setText(
+            message_box.setText("calcul la valeur d'une self\n" 
                 "Entrez :\nle diamètre intérieur en mm \nle nombre de tours \nla longueur totale en mm \nen mémoire STO avant d'appuyer sur le bouton self")  # texte d aide
             message_box.exec_()  # ouvre la boite popup
             self.supprimerResultat()  # efface tout
@@ -426,7 +427,7 @@ class Calculatrice(QtWidgets.QWidget):
             self.le_operation.setText(str(""))  # vide la ligne opération
             message_box = QtWidgets.QMessageBox()  # lance une fenètre d'info en popup
             message_box.setWindowTitle("CALCUL LE NOMBRE DE TOURS D'UNE SELF")  # titre de la fentre popup
-            message_box.setText(
+            message_box.setText("Calul le nombre de tours d'une self en fonction de sa valeur\n"
                 "Entrez :\nle diamètre du support en mm \nle diammètre du fil\nla valeur de la self en µH\nen mémoire STO avant d'appuyer sur le bouton self")  # texte d aide
             message_box.exec_()  # ouvre la boite popup
             self.supprimerResultat()  # efface tout
@@ -460,7 +461,7 @@ class Calculatrice(QtWidgets.QWidget):
             self.le_operation.setText(str(""))  # vide la ligne opération
             message_box = QtWidgets.QMessageBox()  # lance une fenètre d'info en popup
             message_box.setWindowTitle("CALCUL DE LA FREQUENCE DE RESONNANCE LC")  # titre de la fentre popup
-            message_box.setText(
+            message_box.setText("Calcul la fréquence de résonnance d'un circuit LC\n"
                 "Entrez :\nla valeur de la capa en pF \n la valeur de la self µH \n en mémoire STO avant d'appuyer sur le bouton fréquence")  # texte d aide
             message_box.exec_()  # ouvre la boite popup
             self.supprimerResultat()  # efface tout
@@ -477,7 +478,7 @@ class Calculatrice(QtWidgets.QWidget):
             self.le_operation.setText("pour une capa de " + power[0] + " pF et une self de " + power[1] + " µH ")
 
     def corr(self):
-        """fonction de corection de la saisie"""
+        """fonction de correction de la saisie"""
         txt = self.le_resultat.text()
         print(txt)
         tct = txt[:-1]
@@ -492,7 +493,8 @@ class Calculatrice(QtWidgets.QWidget):
             self.le_operation.setText(str(""))  # vide la ligne opération
             message_box = QtWidgets.QMessageBox()  # lance une fenètre d'info en popup
             message_box.setWindowTitle("CALCUL SELF POUR ANTENNE MOBILE")  # titre de la fentre popup
-            message_box.setText(
+            message_box.setText("Donne la valeur de la self nécessaire au raccourcissement d'une antenne mobile\n"
+                "la self sera à placer au centre du fouet"
                 "Entrez : \nla fréquence en MHz de résonnance recherchée  \npuis la longueur de l'antenne désirée en m \nen mémoire STO avant d'appuyer sur le bouton antenne raccourcie")  # texte d aide
             message_box.exec_()  # ouvre la boite popup
             self.supprimerResultat()  # efface tout
@@ -520,7 +522,8 @@ class Calculatrice(QtWidgets.QWidget):
             self.le_operation.setText(str(""))  # vide la ligne opération
             message_box = QtWidgets.QMessageBox()  # lance une fenètre d'info en popup
             message_box.setWindowTitle("AJUSTEMENT DIMENTIONNEL D'UNE ANTENNE")  # titre de la fentre popup
-            message_box.setText(
+            message_box.setText("Fonction qui calcule l'ajustement à apporter à une antenne\n"
+                "mesurez sa fréquence de résonnance une fois installée.\n"
                 "Entrez : \nla fréquence en MHz de résonnance mesurée  \npuis la fréquence en MHz désirée \nen mémoire STO avant d'appuyer sur le bouton réglage")  # texte d aide
             message_box.exec_()  # ouvre la boite popup
             self.supprimerResultat()  # efface tout
