@@ -118,12 +118,12 @@ QMenuBar {
 QPushButton[checkboxBtn=true] {
 	background-color: transparent;
 	border: none;
-	font-size: 14px;
+	font-size: 12px;
 	color: #25FDE9;
 }
 
 QPushButton[checkboxBtn=true]::hover {
-	font-size: 14px;
+	font-size: 12px;
 	border: none;
 	color: #25FDE9;
 }
@@ -133,9 +133,10 @@ QPushButton {
     color: rgb(30, 30, 30);
     border: 0px solid rgb(75, 75, 75);
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 14px;
     padding: 0px 8px 0px 8px;
-    min-height: 32px;
+    min-height: 40px;
+    min-width: 40px;
 }
 
 QPushButton::hover {
@@ -175,7 +176,7 @@ QLineEdit:hover {
 	border: 5px solid rgb(50, 50, 50);
 	padding-bottom: 2px;
 	padding-left: 4px;
-	font-size: 16px;
+	font-size: 22px;
 	background-color: rgb(30, 30, 30);
 	color: #25FDE9;
 }
